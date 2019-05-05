@@ -22,6 +22,10 @@ class Metronome extends React.Component {
     this.setState({ bpm });
   }
 
+  startStop = () => {
+    this.click1.play();
+  }
+
   render() {
     const { playing, bpm } = this.state;
 
@@ -36,7 +40,8 @@ class Metronome extends React.Component {
           value={bpm}
           onChange={this.handleBpmChange} />
         </div>
-        <button>{playing ? 'Stop' : 'Start'}
+        <button onClick={this.startStop}>
+          {playing ? 'Stop' : 'Start'}
         </button>
       </div>
     );
