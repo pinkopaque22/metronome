@@ -48,7 +48,7 @@ class Metronome extends React.Component {
         });
       } else {
         // Start a timer with current bpm
-        this.timer = setInterval(this.playClick,(60 / this.state.bpm) * 100);
+        this.timer = setInterval(this.playClick,(60 / this.state.bpm) * 1000);
         this.setState({
             count: 0,
             playing: true
